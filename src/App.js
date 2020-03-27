@@ -15,7 +15,7 @@ const App = () => {
           <button name = 'pizza'>Pizza</button>
           </Link>
       </nav>
-      <div className="App">
+      <div name="App">
         <Switch>
           <Route exact path="/"  />
           <Route path="/form" component={Form} />
