@@ -1,11 +1,27 @@
 import React from "react";
+import {Route,Link,Switch} from 'react-router-dom';
+import Form from "./components/Form"
+
 
 const App = () => {
   return (
-    <>
-      <h1>Lambda Eats</h1>
-      <p>You can remove this code and create your own header</p>
-    </>
+    <div>
+      <nav className="navbar">
+          <Link to="/">
+            <button name = 'homebutton'>Home</button>
+            </Link>
+          <br/>
+          <Link to="/form"> 
+          <button name = 'pizza'>Pizza</button>
+          </Link>
+      </nav>
+      <div name="App">
+        <Switch>
+          <Route exact path="/"  />
+          <Route path="/form" component={Form} />
+        </Switch>
+      </div>
+    </div>
   );
 };
 export default App;
